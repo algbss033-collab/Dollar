@@ -1,0 +1,692 @@
+Enter* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  background: #08111f;
+
+  color: #f7fbff;
+
+  min-height: 100vh;
+}
+
+
+/* الخلفية */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 10%,
+      #174a78 0,
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 85% 20%,
+      #3b176d 0,
+      transparent 30%
+    ),
+
+    linear-gradient(
+      145deg,
+      #07101d,
+      #0b1728 55%,
+      #101329
+    );
+}
+
+
+/* الهيدر */
+
+.topbar {
+
+  height: 72px;
+
+  border-bottom:
+    1px solid #ffffff18;
+
+  background:
+    #07111ddd;
+
+  backdrop-filter:
+    blur(12px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 5;
+}
+
+
+.brand {
+
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+.brand-icon {
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 13px;
+
+  display: grid;
+
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #39d4ff,
+      #6b55ff
+    );
+
+  font-size: 22px;
+}
+
+
+.brand small {
+
+  display: block;
+
+  color: #9eafc4;
+
+  font-size: 11px;
+
+  margin-top: 3px;
+}
+
+
+.status {
+
+  color: #71f5ae;
+
+  font-size: 12px;
+}
+
+
+/* المحتوى */
+
+.container {
+
+  max-width: 980px;
+
+  margin: auto;
+
+  padding:
+    42px 18px
+    70px;
+}
+
+
+/* الهيرو */
+
+.hero {
+
+  text-align: center;
+
+  padding:
+    18px 0
+    30px;
+}
+
+
+.pill {
+
+  display: inline-block;
+
+  padding:
+    7px 13px;
+
+  border-radius: 99px;
+
+  background:
+    #ffffff10;
+
+  border:
+    1px solid #ffffff16;
+
+  color:
+    #79dfff;
+
+  font-size: 12px;
+}
+
+
+.hero h1 {
+
+  font-size:
+    clamp(
+      28px,
+      5vw,
+      46px
+    );
+
+  margin:
+    16px 0 10px;
+}
+
+
+.hero p {
+
+  color:
+    #a9b8c9;
+
+  margin: 0;
+}
+
+
+/* الكروت */
+
+.card {
+
+  background:
+    #0d1a2cdd;
+
+  border:
+    1px solid #ffffff12;
+
+  border-radius:
+    22px;
+
+  padding:
+    24px;
+
+  margin:
+    18px 0;
+
+  box-shadow:
+    0 18px 55px #0005;
+}
+
+
+.card h2 {
+
+  font-size:
+    19px;
+
+  margin:
+    0 0 18px;
+}
+
+
+/* التطبيقات */
+
+.apps {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap: 14px;
+}
+
+
+.app {
+
+  cursor: pointer;
+
+  border:
+    1px solid #ffffff12;
+
+  background:
+    #101f33;
+
+  padding:
+    18px;
+
+  border-radius:
+    18px;
+
+  color: white;
+
+  text-align: center;
+
+  transition:
+    .2s;
+}
+
+
+.app:hover,
+.app.active {
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #4dd8ff99;
+
+  background:
+    #132c45;
+}
+
+
+.app-icon {
+
+  width: 68px;
+
+  height: 68px;
+
+  border-radius:
+    20px;
+
+  margin:
+    0 auto 10px;
+
+  display: grid;
+
+  place-items: center;
+
+  font-size: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #29c6ff,
+      #6c55ff
+    );
+
+  box-shadow:
+    0 10px 30px #0004;
+}
+
+
+.app b {
+
+  display: block;
+}
+
+
+/* الأسعار */
+
+.section-head {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 10px;
+}
+
+
+.section-head span {
+
+  color:
+    #79dfff;
+
+  font-size: 13px;
+}
+
+
+.packages {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        180px,
+        1fr
+      )
+    );
+
+  gap: 12px;
+}
+
+
+.package {
+
+  cursor: pointer;
+
+  padding:
+    18px;
+
+  border-radius:
+    16px;
+
+  border:
+    1px solid #ffffff12;
+
+  background:
+    #101f33;
+
+  color: white;
+}
+
+
+.package:hover,
+.package.active {
+
+  border-color:
+    #63e1ff;
+
+  background:
+    #112b43;
+}
+
+
+.package strong {
+
+  display: block;
+
+  font-size: 22px;
+}
+
+
+.package span {
+
+  color:
+    #9eafc4;
+
+  font-size: 13px;
+}
+
+
+/* فودافون كاش */
+
+.cash-box {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    18px;
+
+  border-radius:
+    17px;
+
+  background:
+    #081523;
+
+  border:
+    1px dashed #37d6ff66;
+}
+
+
+.cash-box span {
+
+  display: block;
+
+  color:
+    #91a4b9;
+
+  font-size: 12px;
+
+  margin-bottom: 5px;
+}
+
+
+.cash-box strong {
+
+  font-size: 24px;
+
+  letter-spacing:
+    1px;
+}
+
+
+.cash-box button,
+#newOrder {
+
+  border: 0;
+
+  border-radius:
+    12px;
+
+  padding:
+    11px 16px;
+
+  background:
+    #1b88ad;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+.notice {
+
+  color:
+    #b8c6d6;
+
+  font-size: 13px;
+}
+
+
+.notice b {
+
+  color:
+    #70e6ff;
+}
+
+
+/* الفورم */
+
+label {
+
+  display: block;
+
+  color:
+    #cbd7e4;
+
+  font-size: 13px;
+
+  margin:
+    14px 0;
+}
+
+
+input {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 8px;
+
+  background:
+    #081523;
+
+  color: white;
+
+  border:
+    1px solid #ffffff18;
+
+  border-radius:
+    12px;
+
+  padding:
+    13px;
+
+  outline: none;
+}
+
+
+input:focus {
+
+  border-color:
+    #55dcff;
+}
+
+
+.submit {
+
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 15px;
+
+  border: 0;
+
+  border-radius:
+    14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1ec7e8,
+      #695cff
+    );
+
+  color: #fff;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+
+.message {
+
+  margin-top:
+    12px;
+
+  font-size:
+    13px;
+}
+
+
+/* النجاح */
+
+.success {
+
+  text-align:
+    center;
+}
+
+
+.check {
+
+  width:
+    65px;
+
+  height:
+    65px;
+
+  border-radius:
+    50%;
+
+  margin:
+    auto;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    #1b9c65;
+
+  font-size:
+    35px;
+}
+
+
+/* إخفاء */
+
+.hidden {
+
+  display:
+    none !important;
+}
+
+
+/* الفوتر */
+
+footer {
+
+  text-align:
+    center;
+
+  color:
+    #687b91;
+
+  padding:
+    25px;
+
+  font-size:
+    11px;
+}
+
+
+/* موبايل */
+
+@media (
+  max-width: 650px
+) {
+
+  .apps {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .cash-box {
+
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .cash-box strong {
+
+    font-size:
+      20px;
+  }
+
+}
