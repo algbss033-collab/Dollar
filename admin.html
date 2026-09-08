@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>
+    لوحة تحكم الشحن
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="admin.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+  <div>
+
+    <b>
+      لوحة تحكم الشحن
+    </b>
+
+    <small>
+      إدارة الأسعار والطلبات
+    </small>
+
+  </div>
+
+
+  <button id="logout">
+    تسجيل الخروج
+  </button>
+
+</header>
+
+
+<main>
+
+
+  <!-- تسجيل الدخول -->
+
+  <section
+    id="loginCard"
+    class="card login">
+
+    <h1>
+      دخول المدير
+    </h1>
+
+    <p>
+      استخدم حساب Firebase Authentication الخاص بالمدير.
+    </p>
+
+
+    <input
+      id="email"
+      type="email"
+      placeholder="البريد الإلكتروني">
+
+
+    <input
+      id="password"
+      type="password"
+      placeholder="كلمة المرور">
+
+
+    <button id="login">
+      دخول
+    </button>
+
+
+    <div id="loginMsg"></div>
+
+  </section>
+
+
+  <!-- لوحة التحكم -->
+
+  <div
+    id="dashboard"
+    class="hidden">
+
+
+    <div class="grid2">
+
+
+      <!-- إعدادات فودافون -->
+
+      <section class="card">
+
+        <h2>
+          إعدادات التحويل
+        </h2>
+
+        <label>
+          رقم فودافون كاش
+        </label>
+
+        <input
+          id="cashNumber"
+          placeholder="01xxxxxxxxx">
+
+
+        <button id="saveStore">
+          حفظ الرقم
+        </button>
+
+
+        <div id="storeMsg"></div>
+
+      </section>
+
+
+      <!-- التطبيقات -->
+
+      <section class="card">
+
+        <h2>
+          التطبيقات
+        </h2>
+
+        <p class="muted">
+          عدّل أسماء التطبيقات والأيقونات.
+        </p>
+
+
+        <div id="appList"></div>
+
+
+        <button id="saveApps">
+          حفظ التطبيقات
+        </button>
+
+      </section>
+
+
+    </div>
+
+
+    <!-- الأسعار -->
+
+    <section class="card">
+
+      <div class="head">
+
+        <h2>
+          إدارة الأسعار والكميات
+        </h2>
+
+        <span id="priceMsg"></span>
+
+      </div>
+
+
+      <div id="appSelector"></div>
+
+
+      <div id="prices"></div>
+
+
+      <button
+        id="addPrice"
+        class="secondary">
+
+        + إضافة باقة
+
+      </button>
+
+
+      <button id="savePrices">
+
+        حفظ أسعار التطبيق المحدد
+
+      </button>
+
+    </section>
+
+
+    <!-- الطلبات -->
+
+    <section class="card">
+
+      <div class="head">
+
+        <h2>
+          الطلبات الجديدة
+        </h2>
+
+        <span id="orderCount">
+          0
+        </span>
+
+      </div>
+
+
+      <div id="orders"></div>
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+<script
+  type="module"
+  src="admin.js">
+</script>
+
+</body>
+
+</html>
