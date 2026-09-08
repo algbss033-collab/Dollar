@@ -1,0 +1,457 @@
+* {
+  box-sizing:
+    border-box;
+}
+
+
+body {
+
+  margin: 0;
+
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  background:
+    #07101c;
+
+  color:
+    #f4f8fc;
+}
+
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+
+    radial-gradient(
+      circle at 20% 0,
+      #16456d,
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      #06101c,
+      #101728
+    );
+}
+
+
+/* Header */
+
+header {
+
+  height:
+    70px;
+
+  padding:
+    0 5%;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  border-bottom:
+    1px solid #ffffff12;
+
+  background:
+    #081321dd;
+
+  position:
+    sticky;
+
+  top: 0;
+
+  z-index: 5;
+}
+
+
+header small {
+
+  display: block;
+
+  color:
+    #8093a8;
+
+  font-size:
+    11px;
+
+  margin-top:
+    4px;
+}
+
+
+header button,
+.card button {
+
+  border: 0;
+
+  border-radius:
+    10px;
+
+  padding:
+    11px 15px;
+
+  background:
+    #278cae;
+
+  color:
+    white;
+
+  cursor:
+    pointer;
+}
+
+
+/* Main */
+
+main {
+
+  max-width:
+    1200px;
+
+  margin:
+    auto;
+
+  padding:
+    30px 18px
+    70px;
+}
+
+
+/* Card */
+
+.card {
+
+  background:
+    #0d1a2add;
+
+  border:
+    1px solid #ffffff12;
+
+  border-radius:
+    18px;
+
+  padding:
+    20px;
+
+  margin-bottom:
+    18px;
+}
+
+
+.login {
+
+  max-width:
+    430px;
+
+  margin:
+    80px auto;
+}
+
+
+h1,
+h2 {
+
+  margin-top:
+    0;
+}
+
+
+h2 {
+
+  font-size:
+    18px;
+}
+
+
+/* Grid */
+
+.grid2 {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    18px;
+}
+
+
+/* Hidden */
+
+.hidden {
+
+  display:
+    none !important;
+}
+
+
+/* النص */
+
+.muted {
+
+  color:
+    #91a1b4;
+
+  font-size:
+    12px;
+}
+
+
+/* Input */
+
+label {
+
+  font-size:
+    12px;
+
+  color:
+    #aebdcb;
+}
+
+
+input,
+select {
+
+  width:
+    100%;
+
+  margin:
+    7px 0 12px;
+
+  background:
+    #071321;
+
+  border:
+    1px solid #ffffff16;
+
+  color:
+    white;
+
+  padding:
+    12px;
+
+  border-radius:
+    10px;
+
+  outline:
+    none;
+}
+
+
+input:focus {
+
+  border-color:
+    #55dcff;
+}
+
+
+/* التطبيقات */
+
+.app-row {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    8px;
+
+  align-items:
+    center;
+
+  margin:
+    8px 0;
+}
+
+
+/* الأسعار */
+
+.price-row {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.2fr .8fr .8fr auto;
+
+  gap:
+    8px;
+
+  align-items:
+    center;
+
+  margin:
+    8px 0;
+}
+
+
+.price-row button {
+
+  background:
+    #6e3340;
+}
+
+
+/* Buttons */
+
+.secondary {
+
+  background:
+    #34516d !important;
+
+  margin:
+    8px 0;
+}
+
+
+.save {
+
+  background:
+    #187b57 !important;
+}
+
+
+/* الطلبات */
+
+.head {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+}
+
+
+.order {
+
+  border:
+    1px solid #ffffff12;
+
+  border-radius:
+    14px;
+
+  padding:
+    16px;
+
+  margin:
+    10px 0;
+
+  background:
+    #0a1625;
+}
+
+
+.order-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap:
+    8px;
+
+  font-size:
+    12px;
+}
+
+
+.order b {
+
+  color:
+    #7ee6ff;
+}
+
+
+.receipt {
+
+  max-width:
+    120px;
+
+  max-height:
+    100px;
+
+  border-radius:
+    8px;
+
+  object-fit:
+    cover;
+
+  margin-top:
+    10px;
+}
+
+
+.ship {
+
+  background:
+    #1c9b67 !important;
+
+  margin-top:
+    10px;
+}
+
+
+/* موبايل */
+
+@media (
+  max-width: 760px
+) {
+
+  .grid2 {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .order-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .price-row {
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .price-row button {
+
+    grid-column:
+      1 / -1;
+  }
+
+}
