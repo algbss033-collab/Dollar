@@ -1,0 +1,259 @@
+Enter<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>منصة شحن التطبيقات</title>
+
+  <link rel="stylesheet" href="client.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+
+      <div>
+        <b>شحن سريع</b>
+        <small>منصة شحن التطبيقات</small>
+      </div>
+    </div>
+
+    <div class="status">
+      ● متاح الآن
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="hero">
+
+      <span class="pill">
+        شحن آمن وسريع
+      </span>
+
+      <h1>
+        اختر التطبيق وابدأ طلبك
+      </h1>
+
+      <p>
+        اختر الباقة المناسبة، حوّل المبلغ، ثم أرسل بيانات التحويل.
+      </p>
+
+    </section>
+
+
+    <!-- التطبيقات -->
+
+    <section class="card">
+
+      <h2>
+        1) اختر التطبيق
+      </h2>
+
+      <div id="apps" class="apps"></div>
+
+    </section>
+
+
+    <!-- الأسعار -->
+
+    <section
+      id="packagesSection"
+      class="card hidden">
+
+      <div class="section-head">
+
+        <h2>
+          2) اختر الباقة
+        </h2>
+
+        <span id="selectedApp"></span>
+
+      </div>
+
+      <div
+        id="packages"
+        class="packages">
+      </div>
+
+    </section>
+
+
+    <!-- التحويل -->
+
+    <section
+      id="paymentSection"
+      class="card hidden">
+
+      <h2>
+        3) التحويل
+      </h2>
+
+      <div class="cash-box">
+
+        <div>
+
+          <span>
+            رقم فودافون كاش
+          </span>
+
+          <strong id="cashNumber">
+            جارٍ التحميل...
+          </strong>
+
+        </div>
+
+        <button
+          id="copyCash"
+          type="button">
+
+          نسخ الرقم
+
+        </button>
+
+      </div>
+
+      <p class="notice">
+
+        حوّل
+        <b id="amountText">0</b>
+        جنيه ثم احتفظ بصورة إشعار التحويل.
+
+      </p>
+
+    </section>
+
+
+    <!-- بيانات العميل -->
+
+    <section
+      id="formSection"
+      class="card hidden">
+
+      <h2>
+        4) بيانات الطلب
+      </h2>
+
+      <form id="orderForm">
+
+        <label>
+
+          رقم التليفون الذي تم التحويل منه
+
+          <input
+            id="senderPhone"
+            type="tel"
+            inputmode="numeric"
+            placeholder="01xxxxxxxxx"
+            required>
+
+        </label>
+
+
+        <label>
+
+          ID العميل على التطبيق
+
+          <input
+            id="customerId"
+            type="text"
+            placeholder="اكتب الـ ID"
+            required>
+
+        </label>
+
+
+        <label>
+
+          صورة إشعار / إسكرين التحويل
+
+          <input
+            id="receipt"
+            type="file"
+            accept="image/*"
+            required>
+
+          <small>
+            الصورة يجب أن تكون واضحة، وبحد أقصى 5MB.
+          </small>
+
+        </label>
+
+
+        <button
+          class="submit"
+          type="submit">
+
+          إرسال الطلب
+
+        </button>
+
+
+        <div
+          id="formMsg"
+          class="message">
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- نجاح الطلب -->
+
+    <section
+      id="success"
+      class="card success hidden">
+
+      <div class="check">
+        ✓
+      </div>
+
+      <h2>
+        تم استلام طلبك
+      </h2>
+
+      <p>
+        رقم الطلب:
+        <b id="orderId"></b>
+      </p>
+
+      <p>
+        احتفظ برقم الطلب للمتابعة.
+      </p>
+
+      <button
+        id="newOrder"
+        type="button">
+
+        طلب جديد
+
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    © 2026 شحن سريع — جميع الحقوق محفوظة
+
+  </footer>
+
+
+  <script
+    type="module"
+    src="client.js">
+  </script>
+
+</body>
+
+</html>
