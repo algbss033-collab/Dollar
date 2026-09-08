@@ -4,14 +4,14 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-aut
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-storage.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDff_q26sE8hqaIlmmHFuDF0YiB-B-1REo",
-  authDomain: "dollar-f69a2.firebaseapp.com",
-  projectId: "dollar-f69a2",
-  storageBucket: "dollar-f69a2.firebasestorage.app",
-  messagingSenderId: "553294197296",
-  appId: "1:553294197296:web:8eafa7dea8f04f7449b3f5",
-  measurementId: "G-L470W8WLFE"
+const firebaseConfig = { 
+  apiKey : "AIzaSyDff_q26-sE8hqaIlmmHFuDF0Yi-B-1REo" , 
+  authDomain : "dollar-f69a2.firebaseapp.com" , 
+  معرّف المشروع : "dollar-f69a2" ، 
+  storageBucket : "dollar-f69a2.firebasestorage.app" , 
+  messagingSenderId : "553294197296" , 
+  معرف التطبيق : "1:553294197296:web:8eafa7dea8f04f7449b3f5 " 
+  معرف القياس : "G-L470W8WLFE" 
 };
 
 export const app = initializeApp(firebaseConfig);
